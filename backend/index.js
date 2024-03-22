@@ -13,6 +13,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', router)
 
+app.get("/",(req,res)=>{
+     console.log(req.url);
+     res.send("<h1>Hi</h1>")
+})
 
 app.listen(PORT,hostName,()=>{
      console.log("Server Started")
